@@ -3,11 +3,7 @@ package kata.fizzbuzz.tpp;
 public class FizzBuzz {
 
 	public static String say(int number) {
-		String result = "";
-		result = fizzy(number, result);
-		result = buzzy(number, result);
-		result = other(number, result);
-		return result;
+		return other(number, buzzy(number, fizzy(number, "")));
 	}
 
 	private static String other(int number, String result) {
