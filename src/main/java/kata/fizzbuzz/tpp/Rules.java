@@ -19,6 +19,15 @@ enum Rules {
 			return number % 5 == 0;
 		}
 	},
+	ByeBye {
+		public String getResult(int number, String result) {
+			return result + (isByeBye(number) ? "ByeBye" : FizzBuzz.EMPTY_STRING);
+		}
+
+		private boolean isByeBye(int number) {
+			return number % 7 == 0;
+		}
+	},
 	Other {
 		public String getResult(int number, String result) {
 			return (result.isEmpty()) ? String.valueOf(number) : result;
