@@ -3,28 +3,31 @@ package kata.fizzbuzz.tpp;
 enum Rules {
 	Fizz {
 		public String getResult(int number, String result) {
-			return result + (isFizz(number) ? "Fizz" : FizzBuzz.EMPTY_STRING);
+			return result + (isValid(number) ? "Fizz" : FizzBuzz.EMPTY_STRING);
 		}
 
-		private boolean isFizz(int number) {
+		@Override
+		public boolean isValid(int number) {
 			return number % 3 == 0;
 		}
 	},
 	Buzz {
 		public String getResult(int number, String result) {
-			return result + (isBuzz(number) ? "Buzz" : FizzBuzz.EMPTY_STRING);
+			return result + (isValid(number) ? "Buzz" : FizzBuzz.EMPTY_STRING);
 		}
 
-		private boolean isBuzz(int number) {
+		@Override
+		public boolean isValid(int number) {
 			return number % 5 == 0;
 		}
 	},
 	ByeBye {
 		public String getResult(int number, String result) {
-			return result + (isByeBye(number) ? "ByeBye" : FizzBuzz.EMPTY_STRING);
+			return result + (isValid(number) ? "ByeBye" : FizzBuzz.EMPTY_STRING);
 		}
 
-		private boolean isByeBye(int number) {
+		@Override
+		public boolean isValid(int number) {
 			return number % 7 == 0;
 		}
 	},
@@ -33,6 +36,13 @@ enum Rules {
 			return (result.isEmpty()) ? String.valueOf(number) : result;
 		}
 
+		@Override
+		public boolean isValid(int number) {
+			return false;
+		}
+
 	};
 	public abstract String getResult(int number, String result);
+
+	public abstract boolean isValid(int number);
 }
