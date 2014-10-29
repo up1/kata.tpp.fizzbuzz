@@ -21,6 +21,7 @@ public class FizzBuzzTest {
 	@Test
 	public void returnFizzWhenNumberDivide5() {
 		assertEquals("Buzz", FizzBuzz.say(5));
+		assertEquals("Buzz", FizzBuzz.say(10));
 	}
 
 }
