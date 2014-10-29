@@ -3,7 +3,7 @@ package kata.fizzbuzz.tpp;
 enum Rules {
 	Fizz {
 		public String getResult(int number, String result) {
-			return result + (isFizz(number) ? "Fizz" : "");
+			return result + (isFizz(number) ? "Fizz" : FizzBuzz.EMPTY_STRING);
 		}
 
 		private boolean isFizz(int number) {
@@ -12,7 +12,7 @@ enum Rules {
 	},
 	Buzz {
 		public String getResult(int number, String result) {
-			return result + (isBuzz(number) ? "Buzz" : "");
+			return result + (isBuzz(number) ? "Buzz" : FizzBuzz.EMPTY_STRING);
 		}
 
 		private boolean isBuzz(int number) {
