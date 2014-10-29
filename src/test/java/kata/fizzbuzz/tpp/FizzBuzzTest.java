@@ -11,5 +11,10 @@ public class FizzBuzzTest {
 		assertEquals("1", FizzBuzz.say(1));
 		assertEquals("2", FizzBuzz.say(2));
 	}
+	
+	@Test
+	public void returnFizzWhenNumberDivide3() {
+		assertEquals("Fizz", FizzBuzz.say(3));
+	}
 
 }
