@@ -28,5 +28,10 @@ public class FizzBuzzTest {
 	public void returnFizzBuzzWhenNumberDivide3And5() {
 		assertEquals("FizzBuzz", FizzBuzz.say(15));
 	}
+	
+	@Test
+	public void returnByeByeWhenNumberDivide7() {
+		assertEquals("ByeBye", FizzBuzz.say(7));
+	}
 
 }
