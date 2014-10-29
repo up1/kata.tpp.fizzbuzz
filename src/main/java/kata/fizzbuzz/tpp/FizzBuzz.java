@@ -4,13 +4,9 @@ package kata.fizzbuzz.tpp;
 public class FizzBuzz {
 
 	public static String say(int number) {
-		String result = "";
+		String result = String.valueOf(number);
 		if(isFizz(number))
 			result += "Fizz";
-		if(isBuzz(number))
-			result += "Buzz";
-		if(result.isEmpty())
-			result += String.valueOf(number);
 		return result;
 	}
 
