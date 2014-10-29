@@ -32,9 +32,9 @@ public class FizzBuzz {
 
 	public static String say(int number) {
 		String result = "";
-		result = Rules.Fizz.getResult(number, result);
-		result = Rules.Buzz.getResult(number, result);
-		result = Rules.Other.getResult(number, result);
+		for(Rules rule : Rules.values()) {
+			result = rule.getResult(number, result);
+		}
 		return result;
 	}
 
